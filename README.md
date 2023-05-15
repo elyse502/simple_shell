@@ -49,3 +49,4 @@ More info on our blog [here](https://medium.com/@muxanz/how-the-shell-works-inte
 
 # _Authors_:
 (1) NIYIBIZI Elysée(https://github.com/elyse502).
+(2) MUHAYEMARIYA Faustine(https://github.com/faustine-van).
