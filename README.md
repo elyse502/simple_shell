@@ -48,5 +48,5 @@ total 68
 More info on our blog [here](https://medium.com/@muxanz/how-the-shell-works-internally-when-entering-a-command-42f08458870)
 
 # _Authors_:
-1. NIYIBIZI Elysée(https://github.com/elyse502).
-2. MUHAYEMARIYA Faustine(https://github.com/faustine-van).
+1. NIYIBIZI Elysée | [Github](https://github.com/elyse502).
+2. MUHAYEMARIYA Faustine | [Github](https://github.com/faustine-van).
