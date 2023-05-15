@@ -1,0 +1,65 @@
+.\" Manpage for simple_shell.
+.TH simple_shell 1 "2021-24-08" GNU "simple_shell user manual"
+
+.SH NAME
+.B simple_shell
+- A mini version UNIX shell (A command line interpreter)
+
+.SH SYNOPSIS
+Run the executable created after compiling. For example gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o simple_shell
+.br
+.B ./simple_shell
+
+.SH DESCRIPTION
+Creates a prompt where a user can enter valid commands to be executed. You have the option to provide a valid path to the executable of a command of interest.
+.br
+Advanced features such as variable expansions, pattern matching, redirection, piping, among others that the original shell provides are not implemented.
+
+.SH USAGE
+The following are some of the common commands that can be run
+
+.br
+.B /bin/ls
+- Lists files in current working directory (Note that the path to binary to provided)
+
+.br
+.B ls [[option]...[file] ... ]
+- Lists files in current working directory
+
+.br
+.B exit [status_code]
+- Exits out of the shell and returns to original shell
+
+.br
+.B pwd
+- Prints the working directory
+
+.br
+.B More
+- You can execute many other commands like df
+
+.SH EXAMPLE
+Type 
+.B ./simple_shell 
+in your terminal to invoke
+
+.sp
+.br
+.B "#cisfun$ "
+- An empty prompt is shown
+.br 
+.B "#cisfun$ ls -l" 
+- prints all files in current directory
+
+.SH RETURN VALUES
+Result of executed command e.g files for ls or nothing e.g when exit is executed
+
+.SH BUGS
+No known bugs
+
+.SH AUTHOR
+MUHAYEMARIYA Faustine
+.br
+NIYIBIZI Elysée
+.SH SEE ALSO
+https://en.wikipediaorg/wiki/Unix_shell
