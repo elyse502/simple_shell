@@ -36,7 +36,7 @@ total 68
 
 #cisfun$ exit 100
 (your_terminal)$
-More info on our blog here
+[More info on our blog here](https://medium.com/@muxanz/how-the-shell-works-internally-when-entering-a-command-42f08458870)
 
 # Authors:
 (1) NIYIBIZI Elysée(https://github.com/elyse502).
