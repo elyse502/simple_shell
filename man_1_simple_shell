@@ -1,5 +1,5 @@
 .\" Manpage for simple_shell.
-.TH simple_shell 1 "2021-24-08" GNU "simple_shell user manual"
+.TH simple_shell 1 "2023-15-05" GNU "simple_shell user manual"
 
 .SH NAME
 .B simple_shell
@@ -58,8 +58,8 @@ Result of executed command e.g files for ls or nothing e.g when exit is executed
 No known bugs
 
 .SH AUTHOR
-MUHAYEMARIYA Faustine
-.br
 NIYIBIZI Elysée
+.br
+MUHAYEMARIYA Faustine
 .SH SEE ALSO
 https://en.wikipediaorg/wiki/Unix_shell
