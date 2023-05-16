@@ -17,7 +17,6 @@ char *read_line(void)
 
 	/* custom get line */
 	/*chars = get_line(&line);*/
-
 	if (chars == EOF)
 	{
 		free(line);
