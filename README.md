@@ -26,7 +26,7 @@
 (your_terminal)$ git clone <this repository>
 (your_terminal)$ cd simple_shell
 ```
-* Compile;
+* Compile:
 ```
 gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 ```
