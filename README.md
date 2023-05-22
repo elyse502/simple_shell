@@ -1,4 +1,5 @@
 # 0x16. C - Simple Shell
+![eaa6f4c13eddb41293ec166ae76a5e0a](https://github.com/elyse502/simple_shell/assets/125453474/363c8910-a997-431a-9aed-146564f903a0)
 # *SIMPLE SHELL*
 * We created a basic version of the Unix shell from scratch. A program that takes commands from the keyboard and gives them to the operating system to perform. The shell can perform commands such as listing files in current working directory by typing `ls`, `exit`, among others. It works in both interactive and non-interactive mode.
 
