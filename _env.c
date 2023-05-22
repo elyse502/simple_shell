@@ -82,15 +82,18 @@ int _unsetenv(char *var_name)
 	{
 		if (strncmp(environ[i], var_name, name_len) == 0)
 		{
-			env_temp = environ;
-			free(env_temp[0]);
-			do {
-				env_temp[0] = env_temp[1];
-				env_temp++;
-			} while (*env_temp);
+			if (environ[i] != NULL)
+			{
+				env_temp = environ;
+				free(env_temp[i]);
+				do {
+					env_temp[i] = env_temp[i + 1];
+					i++;
+				} while (env_temp[i + 1] != NULL);
+				env_temp[i] = NULL;
+			}
 		}
 		i++;
 	}
 	return (0);
 }
-
