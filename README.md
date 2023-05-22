@@ -52,7 +52,7 @@ total 68
 ## Bugs
 At this time, there are no known bugs.
 
-More info on our blog [here](https://medium.com/@muxanz/how-the-shell-works-internally-when-entering-a-command-42f08458870)
+More info on our blog [here](https://medium.com/@muxanz/how-the-shell-works-internally-when-entering-a-command-42f08458870).
 
 # _Authors_:
 1. NIYIBIZI Elysée | [Github](https://github.com/elyse502).
