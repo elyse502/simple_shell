@@ -49,6 +49,9 @@ total 68
 #cisfun$ exit 100
 (your_terminal)$
 ```
+## Bugs
+At this time, there are no known bugs.
+
 More info on our blog [here](https://medium.com/@muxanz/how-the-shell-works-internally-when-entering-a-command-42f08458870)
 
 # _Authors_:
