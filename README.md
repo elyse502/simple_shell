@@ -19,7 +19,7 @@
 * **man_1_simple_shell**: A manual for the shell.
 * **prompt.c**: Prints the shell's title to indicate the shell is ready to receive input.
 * **readline**: Responsible for picking commands typed into the shell.
-* **handle_path.c**: Contains functions used to handle cases when a command is entered into the shell instead of the path to the executable file. For example when a use types `ls` instead of `\bin\ls`;
+* **handle_path.c**: Contains functions used to handle cases when a command is entered into the shell instead of the path to the executable file. For example when a user types `ls` instead of `\bin\ls`;
 ## How to use the shell:
 * Install;
 ```
