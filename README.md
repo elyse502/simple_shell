@@ -5,6 +5,9 @@
 
 * The following are the allowed functions and system calls;
   * `access`, `chdir`, `close`, `closedir`, `execve`, `exit`, `_exit`, `fflush`, `fork`,`free`, `getcwd`, `getline`, `getpid`, `isatty`, `kill`, `malloc`, `open`, `opendir`, `perror`, `read`, `readdir`, `signal`, `stat`, `lstat`, `fstat`, `strtok`, `wait`, `waitpid`, `wait3`, `wait4`, `write`.
+* This simple shell is a Shell interface written in **C programming** language that gives to the user a prompt *#cisfun$*, after it accepts, it executes a user inputted command in a separate process called child process.
+
+![68747470733a2f2f7365656b6c6f676f2e636f6d2f696d616765732f432f632d70726f6772616d6d696e672d6c616e67756167652d6c6f676f2d394233324430313742312d7365656b6c6f676f2e636f6d2e706e67](https://github.com/elyse502/simple_shell/assets/125453474/0df08bcc-e79f-4a1d-af7f-ed5ca95096f6)
 
 # File Descriptions
 * *__AUTHORS__*: Has the names of this project's contributors.
@@ -51,3 +54,6 @@ More info on our blog [here](https://medium.com/@muxanz/how-the-shell-works-inte
 # _Authors_:
 1. NIYIBIZI Elysée | [Github](https://github.com/elyse502).
 2. MUHAYEMARIYA Faustine | [Github](https://github.com/faustine-van).
+
+![68747470733a2f2f6173736574732e696d6167696e61626c65667574757265732e636f6d2f6d656469612f696d616765732f414c585f4c6f676f2e6d61782d323030783135302e706e67](https://github.com/elyse502/simple_shell/assets/125453474/abb84a4a-feba-4049-98c4-8f5001a4a635)
+
