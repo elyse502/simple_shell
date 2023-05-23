@@ -73,6 +73,13 @@ char *_strcpy(char *dest, char *src)
 
 	return (dest);
 }
+/**
+ *_memset - fill the f_str with char str
+ *@f_str: argument to used to fill
+ *@str: string
+ *@n: lenth of string to be filled
+ *Return: (s)sucess
+ */
 char *_memset(char *f_str, char str, unsigned int n)
 {
 	unsigned int a;

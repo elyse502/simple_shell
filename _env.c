@@ -58,7 +58,7 @@ char *var_build(char *var_name, char *var_value)
 		perror("Error: Insufficient memory\n");
 		return (NULL);
 	}
-	memset(new_var, 0, var_len);
+	_memset(new_var, 0, var_len);
 	/*Data in the form: var_name=var_value*/
 	new_var = _strcat(new_var, var_name);
 	new_var = _strcat(new_var, "=");
