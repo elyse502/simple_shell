@@ -11,7 +11,7 @@
 
 # File Descriptions
 * *__AUTHORS__*: Has the names of this project's contributors.
-* **execute.c**: Contains the function that executes shell commands.
+* **_execute.c**: Contains the function that executes shell commands.
 * **_strings1.c**, **_strings2.c**, **_strings3.c**: Contains functions that are used to manipultate and get data about strings like finding string length and splitting a string.
 * **built-in.c**: Includes functions to perform built-in shell command operations like `exit`.
 * **main.h**: Holds all function prototypes and headers.
