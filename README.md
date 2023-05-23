@@ -24,8 +24,9 @@
 List of builtin funtion supported by this simple shell:
 | Buitin function| Description |
 | :------------ |   :---:      |
-| `env`    |print current environment variable |
-| `setenv` | set new environment variable   |
+| `env`      |Print current environment variable |
+| `setenv`   |Set new environment variable `setenv var_name va_value` |
+| `unsetenv` |Remove environment variable `unsetenv var_name va_value`|
 ## How to use the shell:
 * Install;
 ```
