@@ -8,6 +8,6 @@ void prompt(void)
 {
 	if (isatty(STDIN_FILENO))
 	{
-		write(STDOUT_FILENO, "#cisfun$ ", 9);
+		write(STDOUT_FILENO, "#codfun$ ", 9);
 	}
 }
