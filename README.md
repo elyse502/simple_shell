@@ -46,7 +46,7 @@ total 68
 -rw-rw-r-- 1 vagrant vagrant  1761 Aug 21 06:59 README.md
 -rw-rw-r-- 1 vagrant vagrant   887 Aug 20 10:27 _execute.c
 
-#cisfun$ exit 100
+#codfun$ exit 100
 (your_terminal)$
 ```
 ## Bugs
