@@ -20,6 +20,12 @@
 * **prompt.c**: Prints the shell's title to indicate the shell is ready to receive input.
 * **readline**: Responsible for picking commands typed into the shell.
 * **handle_path.c**: Contains functions used to handle cases when a command is entered into the shell instead of the path to the executable file. For example when a user types `ls` instead of `\bin\ls`;
+## Builtin functions
+List of builtin funtion supported by this simple shell:
+| Buitin function| Description |
+| :------------ |   :---:      |
+| `env`    |print current environment variable |
+| `setenv` | set new environment variable   |
 ## How to use the shell:
 * Install;
 ```
