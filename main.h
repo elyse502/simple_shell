@@ -43,5 +43,5 @@ char *var_build(char *var_name, char *var_value);
 int _setenv(char *var_name, char *var_value);
 int _unsetenv(char *var_name);
 char *_strdup(char *str);
-char *_memset(char *f_str, char str, unsigned int n);
+
 #endif
