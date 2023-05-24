@@ -48,10 +48,20 @@ echo "/bin/ls" | ./hsh
 ## Example
 ```
 #cisfun$ /bin/ls -l
-total 68
--rw-rw-r-- 1 vagrant vagrant   168 Aug 15 06:39 AUTHORS
--rw-rw-r-- 1 vagrant vagrant  1761 Aug 21 06:59 README.md
--rw-rw-r-- 1 vagrant vagrant   887 Aug 20 10:27 _execute.c
+total 100
+-rw-r--r-- 1 runner runner  2029 May 24 05:49 _env.c
+-rw-r--r-- 1 runner runner  1052 May 19 13:26 _execute.c
+-rw-r--r-- 1 runner runner  1767 May 19 13:27 _strings1.c
+-rw-r--r-- 1 runner runner  1351 May 24 05:53 _strings2.c
+-rw-r--r-- 1 runner runner  2516 May 19 13:29 _strings3.c
+-rw-r--r-- 1 runner runner  2074 May 19 13:30 built-in.c
+-rw-r--r-- 1 runner runner  1483 May 19 13:31 handle_path.c
+-rwxr-xr-x 1 runner runner 44128 May 24 05:53 main
+-rw-r--r-- 1 runner runner   752 May 19 13:21 main.c
+-rw-r--r-- 1 runner runner  1225 May 19 13:22 main.h
+-rw-r--r-- 1 runner runner  1520 May 24 05:48 man_1_simple_shell
+-rw-r--r-- 1 runner runner   164 May 24 05:48 prompt.c
+-rw-r--r-- 1 runner runner   506 May 19 13:32 readline.c
 
 #cisfun$ exit 100
 (your_terminal)$
