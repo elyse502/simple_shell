@@ -63,7 +63,7 @@ total 100
 -rw-r--r-- 1 runner runner   164 May 24 05:48 prompt.c
 -rw-r--r-- 1 runner runner   506 May 19 13:32 readline.c
 
-#cisfun$ exit 100
+#cisfun$ exit
 (your_terminal)$
 ```
 ## Bugs
