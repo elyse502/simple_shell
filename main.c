@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-		Status =  _execute(tokens, argv[0]);
+			Status =  _execute(tokens, argv[0]);
 		}
 		free(line);
 		free(tokens);
