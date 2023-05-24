@@ -8,7 +8,7 @@
  */
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
+        return (write(1, &c, 1));
 }
 
 /**
@@ -20,15 +20,15 @@ int _putchar(char c)
 
 int _strcmp(char *s1, char *s2)
 {
-	int i = 0;
+        int i = 0;
 
-	while (s1[i] != '\0' || s2[i] != '\0')
-	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		i++;
-	}
-	return (0);
+        while (s1[i] != '\0' || s2[i] != '\0')
+        {
+                if (s1[i] != s2[i])
+                        return (s1[i] - s2[i]);
+                i++;
+        }
+        return (0);
 }
 /**
  * c_atoi - Custom atoi converts string to int.
@@ -37,18 +37,18 @@ int _strcmp(char *s1, char *s2)
  */
 int c_atoi(char *s)
 {
-	int i = 0;
-	unsigned int num = 0;
+        int i = 0;
+        unsigned int num = 0;
 
-	while (s[i] != '\0')
-	{
-		if (s[i] >= '0' && s[i] <= '9') /* calculate num */
-			num = num * 10 + (s[i] - '0');
-		if (s[i] > '9' || s[i] < '0') /* account for non-numbers */
-			return (-1);
-		i++;
-	}
-	return (num);
+        while (s[i] != '\0')
+        {
+                if (s[i] >= '0' && s[i] <= '9') /* calculate num */
+                        num = num * 10 + (s[i] - '0');
+                if (s[i] > '9' || s[i] < '0') /* account for non-numbers */
+                        return (-1);
+                i++;
+        }
+        return (num);
 }
 
 
@@ -63,30 +63,13 @@ int c_atoi(char *s)
 
 char *_strcpy(char *dest, char *src)
 {
-	int i, len;
+        int i, len;
 
-	for (len = 0; src[len] != '\0'; len++)
-		;
+        for (len = 0; src[len] != '\0'; len++)
+                ;
 
-	for (i = 0; i <= len; i++)
-		dest[i] = src[i];
+        for (i = 0; i <= len; i++)
+                dest[i] = src[i];
 
-	return (dest);
-}
-/**
- *_memset - fill the f_str with char str
- *@f_str: argument to used to fill
- *@str: string
- *@n: lenth of string to be filled
- *Return: (s)sucess
- */
-char *_memset(char *f_str, char str, unsigned int n)
-{
-	unsigned int a;
-
-	for (a = 0; a < n; a++)
-	{
-		f_str[a] = str;
-	}
-	return (f_str);
+        return (dest);
 }
