@@ -93,7 +93,7 @@ void _exitSimpleShell(char **tokens, char *line)
 
 	if (tokens[1] != NULL)
 	{
-		status = c_atoi(tokens[1]);
+		status = atoi(tokens[1]);
 		if (status >= 0)
 		{
 			free(line);
