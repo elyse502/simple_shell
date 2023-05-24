@@ -47,7 +47,7 @@ echo "/bin/ls" | ./hsh
 ```
 ## Example
 ```
-#codfun$ /bin/ls -l
+#cisfun$ /bin/ls -l
 total 68
 -rw-rw-r-- 1 vagrant vagrant   168 Aug 15 06:39 AUTHORS
 -rw-rw-r-- 1 vagrant vagrant  1761 Aug 21 06:59 README.md
