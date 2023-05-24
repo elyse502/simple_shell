@@ -5,7 +5,7 @@
 
 * The following are the allowed functions and system calls;
   * `access`, `chdir`, `close`, `closedir`, `execve`, `exit`, `_exit`, `fflush`, `fork`,`free`, `getcwd`, `getline`, `getpid`, `isatty`, `kill`, `malloc`, `open`, `opendir`, `perror`, `read`, `readdir`, `signal`, `stat`, `lstat`, `fstat`, `strtok`, `wait`, `waitpid`, `wait3`, `wait4`, `write`.
-* This simple shell is a Shell interface written in **C programming** language that gives to the user a prompt **_#codfun$_** , after it accepts, it executes a user inputted command in a separate process called child process.
+* This simple shell is a Shell interface written in **C programming** language that gives to the user a prompt **_#cisfun$_** , after it accepts, it executes a user inputted command in a separate process called child process.
 
 ![68747470733a2f2f7365656b6c6f676f2e636f6d2f696d616765732f432f632d70726f6772616d6d696e672d6c616e67756167652d6c6f676f2d394233324430313742312d7365656b6c6f676f2e636f6d2e706e67](https://github.com/elyse502/simple_shell/assets/125453474/0df08bcc-e79f-4a1d-af7f-ed5ca95096f6)
 
@@ -47,13 +47,23 @@ echo "/bin/ls" | ./hsh
 ```
 ## Example
 ```
-#codfun$ /bin/ls -l
-total 68
--rw-rw-r-- 1 vagrant vagrant   168 Aug 15 06:39 AUTHORS
--rw-rw-r-- 1 vagrant vagrant  1761 Aug 21 06:59 README.md
--rw-rw-r-- 1 vagrant vagrant   887 Aug 20 10:27 _execute.c
+#cisfun$ /bin/ls -l
+total 100
+-rw-r--r-- 1 runner runner  2029 May 24 05:49 _env.c
+-rw-r--r-- 1 runner runner  1052 May 19 13:26 _execute.c
+-rw-r--r-- 1 runner runner  1767 May 19 13:27 _strings1.c
+-rw-r--r-- 1 runner runner  1351 May 24 05:53 _strings2.c
+-rw-r--r-- 1 runner runner  2516 May 19 13:29 _strings3.c
+-rw-r--r-- 1 runner runner  2074 May 19 13:30 built-in.c
+-rw-r--r-- 1 runner runner  1483 May 19 13:31 handle_path.c
+-rwxr-xr-x 1 runner runner 44128 May 24 05:53 main
+-rw-r--r-- 1 runner runner   752 May 19 13:21 main.c
+-rw-r--r-- 1 runner runner  1225 May 19 13:22 main.h
+-rw-r--r-- 1 runner runner  1520 May 24 05:48 man_1_simple_shell
+-rw-r--r-- 1 runner runner   164 May 24 05:48 prompt.c
+-rw-r--r-- 1 runner runner   506 May 19 13:32 readline.c
 
-#codfun$ exit 100
+#cisfun$ exit
 (your_terminal)$
 ```
 ## Bugs

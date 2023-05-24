@@ -45,10 +45,10 @@ in your terminal to invoke
 
 .sp
 .br
-.B "#codfun$ "
+.B "#cisfun$ "
 - An empty prompt is shown
 .br 
-.B "#codfun$ ls -l" 
+.B "#cisfun$ ls -l" 
 - prints all files in current directory
 
 .SH RETURN VALUES

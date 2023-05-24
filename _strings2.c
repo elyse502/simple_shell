@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  * _putchar - Writes the character c to stdout.
  * @c: The character to print.
@@ -32,7 +31,7 @@ int _strcmp(char *s1, char *s2)
 }
 /**
  * c_atoi - Custom atoi converts string to int.
- * @s: String.
+ * @s: string.
  * Return: Number if success, -1 if string contains non-numbers.
  */
 int c_atoi(char *s)
@@ -58,7 +57,7 @@ int c_atoi(char *s)
  * to the buffer pointed to by dest.
  * @dest: Copy source to this buffer.
  * @src: This is the source to copy.
- * Return: copy of original source.
+ * Return: Copy of original source.
  */
 
 char *_strcpy(char *dest, char *src)
@@ -72,21 +71,4 @@ char *_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 
 	return (dest);
-}
-/**
- *_memset - fill the f_str with char str
- *@f_str: argument to used to fill
- *@str: string
- *@n: lenth of string to be filled
- *Return: (s)sucess
- */
-char *_memset(char *f_str, char str, unsigned int n)
-{
-	unsigned int a;
-
-	for (a = 0; a < n; a++)
-	{
-		f_str[a] = str;
-	}
-	return (f_str);
 }
