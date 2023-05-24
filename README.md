@@ -22,9 +22,9 @@
 * **handle_path.c**: Contains functions used to handle cases when a command is entered into the shell instead of the path to the executable file. For example when a user types `ls` instead of `\bin\ls`;
 ## Builtin functions
 List of builtin funtion supported by this simple shell:
-| Buitin function| Description |
+| Buitin Function| Descriptions |
 | :------------ |   :---:      |
-| `env`      |Print current environment variable |
+| `env`      |Print current environment variables |
 | `setenv`   |Set new environment variable `setenv var_name va_value` |
 | `unsetenv` |Remove environment variable `unsetenv var_name va_value`|
 ## How to use the shell:

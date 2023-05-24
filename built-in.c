@@ -72,7 +72,7 @@ int _executeBuiltIn(char **tokens)
 			return (0);
 		}
 		/*else an error msg*/
-		_puts("Usage: unsetenv VAR_NAME\n");
+		printf("Usage: unsetenv VAR_NAME\n");
 		return (0);
 	}
 
