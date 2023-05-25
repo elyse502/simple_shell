@@ -70,7 +70,7 @@ char *var_build(char *var_name, char *var_value)
 /**
  * _unsetenv - Removes an environment variable.
  * @var_name: Variable name.
- * Return: 0 if successful -1,otherwise - -1.
+ * Return: 0 if successful - 1,otherwise - -1.
  */
 int _unsetenv(char *var_name)
 {
