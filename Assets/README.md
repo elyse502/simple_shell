@@ -11,8 +11,8 @@ _For this project, we expect you to look at these concepts:_
 
 # 1. Everything you need to know to start coding your own shell
 ## PID & PPID
-A process is an instance of an executing program, that has a unique process ID. This process ID is used by many functions and system calls to interact with and manipulate processes. In order to retrieve the current process’ ID, you can use the system call getpid (man 2 getpid):
-
+A process is an instance of an executing program, that has a unique process ID. This process ID is used by many functions and system calls to interact with and manipulate processes. In order to retrieve the current process’ ID, you can use the system call `getpid` (man 2 `getpid`):
+```
 julien@ubuntu:~/c/shell$ cat pid.c
 #include <stdio.h>
 #include <unistd.h>
@@ -36,55 +36,57 @@ julien@ubuntu:~/c/shell$ ./mypid
 3238
 julien@ubuntu:~/c/shell$ ./mypid 
 3239
-julien@ubuntu:~/c/shell$ 
+julien@ubuntu:~/c/shell$
+```
 Note in the example above, that every time you run the program, a new process is created, and its ID is different.
 
-Each process has a parent: the process that created it. It is possible to get the PID of a parent process by using the getppid system call (man 2 getppid), from within the child process.
+Each process has a parent: the process that created it. It is possible to get the PID of a parent process by using the `getppid` system call (man 2 `getppid`), from within the child process.
 
-Exercises
-0. getppid
-Write a program that prints the PID of the parent process. Run your program several times within the same shell. It should be the same. Does echo $$ print the same value? Why?
+## Exercises
+#### 0. getppid
+Write a program that prints the PID of the parent process. Run your program several times within the same shell. It should be the same. Does `echo $$` print the same value? Why?
 
-1. /proc/sys/kernel/pid_max
+#### 1. /proc/sys/kernel/pid_max
 Write a shell script that prints the maximum value a process ID can be.
 
-Arguments
-The command line arguments are passed through the main function: int main(int ac, char **av);
+# Arguments
+The command line arguments are passed through the `main` function: `int main(int ac, char **av);`
+* `av` is a `NULL` terminated array of strings
+* `ac` is the number of items in `av`
 
-av is a NULL terminated array of strings
-ac is the number of items in av
-av[0] usually contains the name used to invoke the current program. av[1] is the first argument of the program, av[2] the second, and so on.
+`av[0]` usually contains the name used to invoke the current program. `av[1]` is the first argument of the program, `av[2]` the second, and so on.
 
-Exercises
-0. av
-Write a program that prints all the arguments, without using ac.
+## Exercises
+#### 0. av
+Write a program that prints all the arguments, without using `ac`.
 
-1. Read line
-Write a program that prints "$ ", wait for the user to enter a command, prints it on the next line.
+#### 1. Read line
+Write a program that prints `"$ "`, wait for the user to enter a command, prints it on the next line.
 
-man 3 getline
+man 3 `getline`
 
-important make sure you read the man, and the RETURN VALUE section, in order to know when to stop reading Keyword: “end-of-file”, or EOF (or Ctrl+D).
+**important** make sure you read the man, and the RETURN VALUE section, in order to know when to stop reading Keyword: “end-of-file”, or `EOF` (or `Ctrl+D`).
 
-#advanced: Write your own version of getline.
-
+#advanced: Write your own version of `getline`.
+```
 julien@ubuntu:~/c/shell$ gcc -Wall -Wextra -Werror -pedantic prompt.c -o prompt
 julien@ubuntu:~/c/shell$ ./prompt 
 $ cat prompt.c
 cat prompt.c
-julien@ubuntu:~/c/shell$ 
-2. command line to av
+julien@ubuntu:~/c/shell$
+```
+#### 2. command line to av
 Write a function that splits a string and returns an array of each word of the string.
 
-man strtok
+man `strtok`
 
-#advanced: Write the function without strtok
+_#advanced_: Write the function without `strtok`
 
-Executing a program
-The system call execve allows a process to execute another program (man 2 execve). Note that this system call does load the new program into the current process’ memory in place of the “previous” program: on success execve does not return to continue the rest of the “previous” program.
+## Executing a program
+The system call `execve` allows a process to execute another program (man 2 `execve`). Note that this system call does load the new program into the current process’ memory in place of the “previous” program: on success `execve` does not return to continue the rest of the “previous” program.
 
-Warning: in this example, execve is used without the current environment (last argument), don’t forget to add it in your Shell!
-
+### Warning: in this example, `execve` is used without the current environment (last argument), don’t forget to add it in your Shell!
+```
 julien@ubuntu:~/c/shell$ cat exec.c
 #include <stdio.h>
 #include <unistd.h>
@@ -121,10 +123,11 @@ drwxr-xr-x   3 root root  4096 Jul 19 13:48 locale
 drwxr-xr-x   2 root root 12288 Dec  2 11:03 sbin
 drwxr-xr-x 295 root root 12288 Jul 27 08:58 share
 drwxr-xr-x   6 root root  4096 Dec  1 11:39 src
-julien@ubuntu:~/c/shell$ 
-Creating processes
-The system call fork (man 2 fork) creates a new child process, almost identical to the parent (the process that calls fork). Once fork successfully returns, two processes continue to run the same program, but with different stacks, datas and heaps.
-
+julien@ubuntu:~/c/shell$
+```
+## Creating processes
+The system call `fork` (man 2 `fork`) creates a new child process, almost identical to the parent (the process that calls `fork`). Once `fork` successfully returns, two processes continue to run the same program, but with different stacks, datas and heaps.
+```
 julien@ubuntu:~/c/shell$ cat fork.c
 #include <stdio.h>
 #include <unistd.h>
@@ -157,10 +160,11 @@ After fork
 My pid is 4819
 julien@ubuntu:~/c/shell$ After fork
 My pid is 4820
-Note: there is no typo in the above example
+```
+_Note: there is no typo in the above example_
 
-Using the return value of fork, it is possible to know if the current process is the father or the child: fork will return 0 to the child, and the PID of the child to the father.
-
+Using the return value of `fork`, it is possible to know if the current process is the father or the child: `fork` will return `0` to the child, and the PID of the child to the father.
+```
 julien@ubuntu:~/c/shell$ cat fork.c
 #include <stdio.h>
 #include <unistd.h>
@@ -199,9 +203,10 @@ My pid is 4869
 (4869) 4870, I am your father
 julien@ubuntu:~/c/shell$ My pid is 4870
 (4870) Nooooooooo!
-Wait
-The wait system call (man 2 wait) suspends execution of the calling process until one of its children terminates.
-
+```
+## Wait
+The `wait` system call (man 2 `wait`) suspends execution of the calling process until one of its children terminates.
+```
 julien@ubuntu:~/c/shell$ cat wait.c
 #include <stdio.h>
 #include <unistd.h>
@@ -240,13 +245,14 @@ julien@ubuntu:~/c/shell$ gcc -Wall -Wextra -Werror -pedantic wait.c -o wait
 julien@ubuntu:~/c/shell$ ./wait 
 Wait for me, wait for me
 Oh, it's all better now
-julien@ubuntu:~/c/shell$ 
-Exercise: fork + wait + execve
-Write a program that executes the command ls -l /tmp in 5 different child processes. Each child should be created by the same process (the father). Wait for a child to exit before creating a new child.
+julien@ubuntu:~/c/shell$
+```
+## Exercise: fork + wait + execve
+Write a program that executes the command `ls -l /tmp` in 5 different child processes. Each child should be created by the same process (the father). Wait for a child to exit before creating a new child.
 
-Exercise: super simple shell
+## Exercise: super simple shell
 Using everything we saw, write a first version of a super simple shell that can run commands with their full path, without any argument.
-
+```
 julien@ubuntu:~/c/shell$ l
 total 140
 drwxrwxr-x  2 julien julien 4096 Dec  4 20:55 .
@@ -278,10 +284,11 @@ env-main.c     exec.c  fork.c  pid.c  ppid.c  prompt    prompt.c  shell.c  wait.
 #cisfun$ ./ppid
 5451
 #cisfun$ ^C
-julien@ubuntu:~/c/shell$ 
-File information
-The stat (man 2 stat) system call gets the status of a file. On success, zero is returned. On error, -1 is returned.
-
+julien@ubuntu:~/c/shell$
+```
+## File information
+The `stat` (man 2 stat) system call gets the status of a file. On success, zero is returned. On error, -1 is returned.
+```
 julien@ubuntu:~/c/shell$ cat stat.c
 #include <stdio.h>
 #include <sys/types.h>
@@ -323,14 +330,15 @@ julien@ubuntu:~/c/shell$ ./stat ls /bin/ls /usr/bin/ls
 ls: NOT FOUND
 /bin/ls: FOUND
 /usr/bin/ls: NOT FOUND
-julien@ubuntu:~/c/shell$ 
-Exercise: find a file in the PATH
+julien@ubuntu:~/c/shell$
+```
+## Exercise: find a file in the PATH
 Write a program that looks for files in the current PATH.
+* Usage: `_which filename ...`
 
-Usage: _which filename ...
-Environment
-We have seen earlier that the shell uses an environment list, where environment variables are “stored”. The list is an array of strings, with the following format: var=value, where var is the name of the variable and value its value. As a reminder, you can list the environment with the command printenv:
-
+## Environment
+We have seen earlier that the shell uses an environment list, where environment variables are “stored”. The list is an array of strings, with the following format: `var=value`, where `var` is the name of the variable and value its `value`. As a reminder, you can list the environment with the command `printenv`:
+```
 julien@ubuntu:~/c/shell$ printenv
 XDG_VTNR=7
 XDG_SESSION_ID=c2
@@ -393,21 +401,22 @@ LESSCLOSE=/usr/bin/lesspipe %s %s
 XAUTHORITY=/home/julien/.Xauthority
 OLDPWD=/home/julien/c
 _=/usr/bin/printenv
-julien@ubuntu:~/c/shell$ 
+julien@ubuntu:~/c/shell$
+```
 Actually, every process comes with an environment. When a new process is created, it inherits a copy of its parent’s environment. To access the entire environment within a process, you have several options:
+* via the `main` function
+* via the global variable `environ` (man environ)
 
-via the main function
-via the global variable environ (man environ)
-main
-So far we have seen that main could have different prototypes:
+## main
+So far we have seen that `main` could have different prototypes:
+* `int main(void);`
+* `int main(int ac, char **av);`
 
-int main(void);
-int main(int ac, char **av);
 There is actually another prototype:
+* `int main(int ac, char **av, char **env);`
 
-int main(int ac, char **av, char **env);
-where env is a NULL terminated array of strings.
-
+where `env` is a `NULL` terminated array of strings.
+```
 julien@ubuntu:~/c/shell$ cat env-main.c
 #include <stdio.h>
 
@@ -490,37 +499,38 @@ LESSCLOSE=/usr/bin/lesspipe %s %s
 XAUTHORITY=/home/julien/.Xauthority
 OLDPWD=/home/julien/c
 _=./printenv
-julien@ubuntu:~/c/shell$ 
-Exercises
-0. printenv with environ
-Write a program that prints the environment using the global variable environ.
+julien@ubuntu:~/c/shell$
+```
+## Exercises
+#### 0. printenv with environ
+Write a program that prints the environment using the global variable `environ`.
 
-1. env vs environ
-Write a program that prints the address of env (the third parameter of the main function) and environ (the global variable). Are they they same? Does this make sense?
+#### 1. env vs environ
+Write a program that prints the address of `env` (the third parameter of the `main` function) and `environ` (the global variable). Are they they same? Does this make sense?
 
-2. getenv()
+#### 2. getenv()
 Write a function that gets an environment variable. (without using getenv)
+* Prototype: `char *_getenv(const char *name);`
 
-Prototype: char *_getenv(const char *name);
-man 3 getenv
+man 3 `getenv`
 
-3. PATH
-Write a function that prints each directory contained in the the environment variable PATH, one directory per line.
+#### 3. PATH
+Write a function that prints each directory contained in the the environment variable `PATH`, one directory per line.
 
-4. PATH
-Write a function that builds a linked list of the PATH directories.
+#### 4. PATH
+Write a function that builds a linked list of the `PATH` directories.
 
-5. setenv
-Write a function that changes or adds an environment variable (without using setenv).
+#### 5. setenv
+Write a function that changes or adds an environment variable (without using `setenv`).
+* Prototype: `int _setenv(const char *name, const char *value, int overwrite);`
 
-Prototype: int _setenv(const char *name, const char *value, int overwrite);
-man 3 setenv
+man 3 `setenv`
 
-6. unsetenv
-Write a function that deletes the variable name from the environment (without using unsetenv).
+#### 6. unsetenv
+Write a function that deletes the variable name from the environment (without using `unsetenv`).
+* Prototype: `int _unsetenv(const char *name);`
 
-Prototype: int _unsetenv(const char *name);
-man 3 unsetenv
+man 3 `unsetenv`
 
 
 
