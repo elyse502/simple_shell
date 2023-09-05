@@ -554,12 +554,22 @@ Be sure to break your task or project into smaller and smaller pieces, until you
 
 When you are in step 10, “Write your code on your computer”, you should code each piece one at a time and debug right after each small step to make sure everything works properly. This will also prevent you from having to debug multiple pieces at the same time and thus, will make your life much easier.
 
+# Background Context
+Write a simple UNIX command interpreter.
 
+![shell](https://github.com/elyse502/simple_shell/assets/125453474/a4dd7759-11dc-4cff-a9f9-bd988d1bb4de)
 
+_^ “The Gates of Shell”, by [Spencer Cheng](https://twitter.com/spencerhcheng/status/855104635069054977), featuring [Julien Barbier](https://twitter.com/julienbarbier42)_
 
+# Resources🏗️
+## Read or watch:
+* [Unix shell](https://en.wikipedia.org/wiki/Unix_shell)
+* [Thompson shell](https://en.wikipedia.org/wiki/Thompson_shell)
+* [Ken Thompson](https://en.wikipedia.org/wiki/Ken_Thompson)
+* **Everything you need to know to start coding your own shell** concept page
 
-
-
+### man or help:
+* `sh` (Run `sh` as well)
 
 
 
